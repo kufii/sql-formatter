@@ -48,8 +48,8 @@ export default function behavesLikeSqlFormatter(language) {
       "SELECT DISTINCT name, ROUND(age/7) field1, 18 + 20 AS field2, 'some string' FROM foo;"
     );
     expect(result).toBe(dedent/* sql */ `
-      SELECT
-        DISTINCT name,
+      SELECT DISTINCT
+        name,
         ROUND(age / 7) field1,
         18 + 20 AS field2,
         'some string'
@@ -140,8 +140,8 @@ export default function behavesLikeSqlFormatter(language) {
   it('preserves case of keywords', () => {
     const result = format('select distinct * frOM foo left join bar WHERe a > 1 and b = 3');
     expect(result).toBe(dedent/* sql */ `
-      select
-        distinct *
+      select distinct
+        *
       frOM
         foo
         left join bar
@@ -483,8 +483,8 @@ export default function behavesLikeSqlFormatter(language) {
       uppercase: true
     });
     expect(result).toBe(dedent/* sql */ `
-      SELECT
-        DISTINCT *
+      SELECT DISTINCT
+        *
       FROM
         foo
         LEFT JOIN bar

@@ -522,6 +522,7 @@ const reservedTopLevelWords = [
   'INTERSECT',
   'LIMIT',
   'ORDER BY',
+  'SELECT DISTINCT',
   'SELECT',
   'SET CURRENT SCHEMA',
   'SET SCHEMA',

@@ -192,6 +192,7 @@ const reservedTopLevelWords = [
   'NEST',
   'ORDER BY',
   'PREPARE',
+  'SELECT DISTINCT',
   'SELECT',
   'SET CURRENT SCHEMA',
   'SET SCHEMA',
